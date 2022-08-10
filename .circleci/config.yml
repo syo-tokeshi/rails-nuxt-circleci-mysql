@@ -7,7 +7,7 @@ orbs:
 jobs:
   test_backend:
     docker:
-      - image: circleci/ruby:2.6.6-stretch-node
+      - image: circleci/ruby:2.7.6-stretch-node
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -70,7 +70,7 @@ jobs:
 
   test_frontend:
     docker:
-      - image: circleci/node:14.3
+      - image: circleci/node:16.13.1
         environment:
           NODE_ENV: test
 
