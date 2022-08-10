@@ -7,7 +7,7 @@ orbs:
 jobs:
   test_backend:
     docker:
-      - image: circleci/ruby:2.7
+      - image: cimg/ruby:2.7.6
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
