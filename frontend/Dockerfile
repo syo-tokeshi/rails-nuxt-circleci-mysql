@@ -1,4 +1,4 @@
-FROM node:14.3
+FROM node:16.16.0
 
 WORKDIR /app
 
@@ -11,11 +11,12 @@ ADD package-lock.json /app/package-lock.json
 
 RUN apt-get update -y && \
   apt-get upgrade -y && \
-  npm install npm@6.14.4 && \
-  npm install ejs@3.0.1 &&\
-  npm install nuxt@2.0.0 &&\
-  npm install create-nuxt-app@2.15.0 &&\
-  npm install defu@3.1.0
+  npm install npm && \
+  npm install ejs &&\
+  npm install nuxt &&\
+  npm install create-nuxt-app &&\
+  npm install defu &&\
+  npm i vue
 
 ADD . /app
 

@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:2.7.6
 
 ENV LANG C.UTF-8
 ENV TZ Asia/Tokyo
@@ -14,7 +14,7 @@ RUN apt-get update -qq && \
   libpq-dev \
   sudo \
   nginx && \
-  gem install bundler:2.0.1
+  gem install bundler
 
 RUN bundle install
 
